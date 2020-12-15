@@ -2,7 +2,7 @@ version: "3"
 
 services:
   namenode:
-    image: bde2020/hadoop-namenode:2.0.0-hadoop3.2.1-java8
+    image: wachira90/hadoop-namenode:2.0.0-hadoop3.2.1-java8
     container_name: namenode
     restart: always
     ports:
@@ -16,7 +16,7 @@ services:
       - ./hadoop.env
 
   datanode1:
-    image: bde2020/hadoop-datanode:2.0.0-hadoop3.2.1-java8
+    image: wachira90/hadoop-datanode:2.0.0-hadoop3.2.1-java8
     container_name: datanode1
     restart: always
     volumes:
@@ -27,7 +27,7 @@ services:
       - ./hadoop.env
 
   datanode2:
-    image: bde2020/hadoop-datanode:2.0.0-hadoop3.2.1-java8
+    image: wachira90/hadoop-datanode:2.0.0-hadoop3.2.1-java8
     container_name: datanode2
     restart: always
     volumes:
@@ -38,7 +38,7 @@ services:
       - ./hadoop.env  
 
   datanode3:
-    image: bde2020/hadoop-datanode:2.0.0-hadoop3.2.1-java8
+    image: wachira90/hadoop-datanode:2.0.0-hadoop3.2.1-java8
     container_name: datanode3
     restart: always
     volumes:
@@ -49,7 +49,7 @@ services:
       - ./hadoop.env
 
   resourcemanager:
-    image: bde2020/hadoop-resourcemanager:2.0.0-hadoop3.2.1-java8
+    image: wachira90/hadoop-resourcemanager:2.0.0-hadoop3.2.1-java8
     container_name: resourcemanager
     restart: always
     environment:
@@ -58,7 +58,7 @@ services:
       - ./hadoop.env
 
   nodemanager1:
-    image: bde2020/hadoop-nodemanager:2.0.0-hadoop3.2.1-java8
+    image: wachira90/hadoop-nodemanager:2.0.0-hadoop3.2.1-java8
     container_name: nodemanager
     restart: always
     environment:
@@ -67,7 +67,7 @@ services:
       - ./hadoop.env
   
   historyserver:
-    image: bde2020/hadoop-historyserver:2.0.0-hadoop3.2.1-java8
+    image: wachira90/hadoop-historyserver:2.0.0-hadoop3.2.1-java8
     container_name: historyserver
     restart: always
     environment:
